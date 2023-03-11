@@ -1,22 +1,22 @@
 # BrightSight
-#Cài đặt môi trường trên Jetson Nano 
+# Cài đặt môi trường trên Jetson Nano 
 sudo apt-get install virtualenv
 python3 -m virtualenv -p python3 env
 source env/bin/activate
 
 #  update and  upgrade
-sudo apt-get -y update;
+sudo apt-get -y update
 sudo apt-get -y upgrade
 
-#Dependencies
+# Dependencies
 sudo apt-get install python3-setuptools
 
-########## install speech_text ############
-sudo apt-get install portaudio19-dev -y;
-pip3 install -r speech_text/requirements.txt;
+# install speech_text
+sudo apt-get install portaudio19-dev -y
+pip3 install -r speech_text/requirements.txt
 sudo apt-get install flac
 
-########## install image captioning #############
+# install image captioning
 # install pytorch #
 # install the dependencies (if not already onboard)
 sudo apt-get install python3-pip libjpeg-dev libopenblas-dev libopenmpi-dev libomp-dev
@@ -36,7 +36,7 @@ sudo -H pip3 install torch-1.10.0a0+git36449ea-cp36-cp36m-linux_aarch64.whl
 rm torch-1.10.0a0+git36449ea-cp36-cp36m-linux_aarch64.whl
 
 
-# install torchvison #
+# install torchvison
 # Used with PyTorch 1.10.0
 # the dependencies
 sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev
