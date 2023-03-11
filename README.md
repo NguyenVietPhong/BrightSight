@@ -88,17 +88,17 @@
   
   cd dlib-19.17
   
-<!--   Trước khi biên dịch dlib, chúng ta cần chú thích một dòng dòng 854 -->
+  #Trước khi biên dịch dlib, chúng ta cần chú thích một dòng dòng 854
 
   gedit dlib/cuda/cudnn_dlibapi.cpp
   
   //forward_algo = forward_best_algo;
   
-<!--   Tiếp theo, chạy các lệnh này để biên dịch và cài đặt dlib -->
+  #Tiếp theo, chạy các lệnh này để biên dịch và cài đặt dlib
 
   sudo python3 setup.py install
   
-<!--   Cuối cùng, chúng ta cần cài đặt thư viện face_recognition -->
+ #Cuối cùng, chúng ta cần cài đặt thư viện face_recognition
 
   sudo pip3 install face_recognition
 
