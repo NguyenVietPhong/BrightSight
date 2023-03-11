@@ -75,7 +75,7 @@
   
   sudo apt-get install python3-pip cmake libopenblas-dev liblapack-dev libjpeg-dev
   
-  # Trước khi tiếp tục, chúng ta cần tạo một tệp hoán đổi. Jetson Nano chỉ có 4GB RAM sẽ không đủ để biên dịch dlib. Để giải quyết vấn đề này, chúng tôi sẽ thiết lập   một tệp hoán đổi cho phép chúng tôi sử dụng dung lượng ổ đĩa làm RAM bổ sung.
+  #Trước khi tiếp tục, chúng ta cần tạo một tệp hoán đổi. Jetson Nano chỉ có 4GB RAM sẽ không đủ để biên dịch dlib. Để giải quyết vấn đề này, chúng tôi sẽ thiết lập   một tệp hoán đổi cho phép chúng tôi sử dụng dung lượng ổ đĩa làm RAM bổ sung.
   
   git clone https://github.com/JetsonHacksNano/installSwapfile
   
