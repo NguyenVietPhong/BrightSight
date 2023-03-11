@@ -70,6 +70,38 @@
 # clean up
   rm torchvision-0.11.0a0+fa347eb-cp36-cp36m-linux_aarch64.whl
 
+# Cài đặt face_recognition
+  sudo apt-get update
+  
+  sudo apt-get install python3-pip cmake libopenblas-dev liblapack-dev libjpeg-dev
+  
+  # Trước khi tiếp tục, chúng ta cần tạo một tệp hoán đổi. Jetson Nano chỉ có 4GB RAM sẽ không đủ để biên dịch dlib. Để giải quyết vấn đề này, chúng tôi sẽ thiết lập   một tệp hoán đổi cho phép chúng tôi sử dụng dung lượng ổ đĩa làm RAM bổ sung.
+  
+  git clone https://github.com/JetsonHacksNano/installSwapfile
+  
+  ./installSwapfile/installSwapfile.sh
+  
+  # download dlib
+  wget http://dlib.net/files/dlib-19.17.tar.bz2 
+  
+  tar jxvf dlib-19.17.tar.bz2
+  
+  cd dlib-19.17
+  
+<!--   Trước khi biên dịch dlib, chúng ta cần chú thích một dòng dòng 854 -->
+
+  gedit dlib/cuda/cudnn_dlibapi.cpp
+  
+  //forward_algo = forward_best_algo;
+  
+<!--   Tiếp theo, chạy các lệnh này để biên dịch và cài đặt dlib -->
+
+  sudo python3 setup.py install
+  
+<!--   Cuối cùng, chúng ta cần cài đặt thư viện face_recognition -->
+
+  sudo pip3 install face_recognition
+
 # install tritionclient #
   pip3 install tritonclient[all]
 
