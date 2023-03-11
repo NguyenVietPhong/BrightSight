@@ -5,15 +5,15 @@ python3 -m virtualenv -p python3 env
 source env/bin/activate
 
 #  update and  upgrade
-sudo apt-get -y update
+sudo apt-get -y update;
 sudo apt-get -y upgrade
 
 #Dependencies
 sudo apt-get install python3-setuptools
 
 ########## install speech_text ############
-sudo apt-get install portaudio19-dev -y
-pip3 install -r speech_text/requirements.txt
+sudo apt-get install portaudio19-dev -y;
+pip3 install -r speech_text/requirements.txt;
 sudo apt-get install flac
 
 ########## install image captioning #############
